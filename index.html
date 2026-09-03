@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bibek Maharjan — IT support, networking, systems administration, virtualization and Linux.">
+  <title>Bibek Maharjan — Systems in Motion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="loader" aria-hidden="true"><div class="loader-name">BM</div><div class="loader-line"><i></i></div><p>INITIALIZING SYSTEM</p></div>
+  <canvas id="network" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><i></i></div>
+
+  <header class="nav">
+    <a class="mark" href="#home" aria-label="Bibek Maharjan home">BM<span>®</span></a>
+    <p class="nav-role">IT SUPPORT / NETWORKS<br>SYSTEMS / LINUX</p>
+    <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#profile">Profile</a><a href="#contact">Contact</a></nav>
+    <button class="menu" aria-label="Open menu" aria-expanded="false">MENU</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-index mono">PORTFOLIO / 2026</div>
+      <h1><span class="name-row">Bibek</span><span class="name-row indent">Maharjan</span></h1>
+      <div class="hero-orbit" aria-hidden="true">
+        <div class="core"><div class="core-face f1"></div><div class="core-face f2"></div><div class="core-face f3"></div></div>
+        <div class="ring r1"><i></i><i></i><i></i></div><div class="ring r2"><i></i><i></i><i></i><i></i></div>
+        <span class="orbit-label l1">NETWORK</span><span class="orbit-label l2">SYSTEMS</span><span class="orbit-label l3">SUPPORT</span>
+      </div>
+      <div class="hero-bottom">
+        <p>Computer engineering technician creating reliable infrastructure and calm solutions to complex technical problems.</p>
+        <a class="circle-link magnetic" href="#work"><span>EXPLORE<br>WORK</span><b>↓</b></a>
+        <p class="availability"><i></i> Available for IT opportunities<br>Ontario, Canada</p>
+      </div>
+    </section>
+
+    <section class="statement reveal" id="profile">
+      <p class="section-no mono">01 / PROFILE</p>
+      <h2>I work where <em>people</em>, networks and systems meet.</h2>
+      <div class="statement-foot"><p>From resolving user issues to configuring routed networks and Windows Server environments, I turn technical complexity into systems people can depend on.</p><span class="mono">2+ YEARS<br>USER SUPPORT</span></div>
+    </section>
+
+    <section class="work" id="work">
+      <div class="work-intro reveal"><p class="section-no mono">02 / SELECTED WORK</p><h2>Built.<br>Tested.<br><span>Documented.</span></h2></div>
+
+      <article class="case reveal tilt">
+        <div class="case-top mono"><span>PROJECT / 001</span><span>HELP DESK</span><span>2026</span></div>
+        <div class="case-body">
+          <div><h3>osTicket<br>Support Lab</h3><p>A complete ticketing environment showing the support lifecycle from intake and triage to SLA management and resolution.</p><a class="text-link magnetic" href="https://github.com/bieebek/osticket-helpdesk-lab" target="_blank" rel="noreferrer">VIEW CASE STUDY <b>↗</b></a></div>
+          <div class="case-scene tickets-scene" aria-hidden="true">
+            <div class="ticket-card t1"><span>#1042</span><b>ACCESS ISSUE</b><small>PRIORITY · HIGH</small></div>
+            <div class="ticket-card t2"><span>#1041</span><b>SOFTWARE REQUEST</b><small>STATUS · OPEN</small></div>
+            <div class="ticket-card t3"><span>#1039</span><b>EMAIL CONFIG</b><small>STATUS · RESOLVED</small></div>
+          </div>
+        </div>
+        <div class="case-tags mono"><span>OSTICKET</span><span>IIS</span><span>MYSQL</span><span>AZURE VM</span></div>
+      </article>
+
+      <article class="case reveal tilt inverse">
+        <div class="case-top mono"><span>PROJECT / 002</span><span>NETWORK ENGINEERING</span><span>2026</span></div>
+        <div class="case-body">
+          <div><h3>Secure<br>Multi-Site Network</h3><p>A three-router topology configured with OSPF, local AAA, SSH, role-based CLI views and a site-to-site IPSec VPN.</p></div>
+          <div class="case-scene router-scene" aria-label="Animated network topology">
+            <div class="router a">R1<small>10.1.1.1</small></div><div class="beam b1"></div><div class="router b">R2<small>CORE</small></div><div class="beam b2"></div><div class="router c">R3<small>10.2.2.1</small></div>
+            <span class="packet p1"></span><span class="packet p2"></span>
+          </div>
+        </div>
+        <div class="case-tags mono"><span>CISCO IOS</span><span>OSPF</span><span>IPSEC</span><span>AAA / SSH</span></div>
+      </article>
+
+      <article class="case reveal tilt">
+        <div class="case-top mono"><span>PROJECT / 003</span><span>SYSTEM ADMINISTRATION</span><span>2026</span></div>
+        <div class="case-body">
+          <div><h3>Windows<br>Deployment Lab</h3><p>An integrated Server 2022 environment with Active Directory, DNS, DHCP and WDS for automated PXE client deployment.</p></div>
+          <div class="case-scene server-scene" aria-hidden="true">
+            <div class="rack"><div><i></i><span>DC01</span><small>192.168.71.10</small></div><div><i></i><span>WDS</span><small>192.168.71.160</small></div><div><i></i><span>CLIENT</span><small>DOMAIN JOINED</small></div></div>
+          </div>
+        </div>
+        <div class="case-tags mono"><span>SERVER 2022</span><span>AD DS</span><span>DHCP / DNS</span><span>WDS / PXE</span></div>
+      </article>
+    </section>
+
+    <section class="capabilities">
+      <p class="section-no mono reveal">03 / CAPABILITIES</p>
+      <div class="cap-list">
+        <div class="cap reveal"><span class="mono">01</span><h3>IT Support</h3><p>Ticket triage · Troubleshooting · End-user support · Documentation</p></div>
+        <div class="cap reveal"><span class="mono">02</span><h3>Networking</h3><p>TCP/IP · OSPF · VLANs · VPN · DNS · DHCP · Cisco IOS</p></div>
+        <div class="cap reveal"><span class="mono">03</span><h3>Systems</h3><p>Windows Server · Active Directory · Group Policy · WDS · Linux</p></div>
+        <div class="cap reveal"><span class="mono">04</span><h3>Virtualization</h3><p>VMware · vSphere · ESXi · vCenter · Hyper-V · VirtualBox</p></div>
+      </div>
+    </section>
+
+    <section class="experience">
+      <p class="section-no mono reveal">04 / EXPERIENCE</p>
+      <div class="exp-row reveal"><time class="mono">2021—2023</time><div><h3>Junior IT Support Technician</h3><p>Marine Engineering Solution Pvt. Ltd.</p></div><b>2 YEARS ↗</b></div>
+      <div class="exp-row reveal"><time class="mono">EDUCATION</time><div><h3>Computer Engineering Technician</h3><p>Northern College · Ontario</p></div><b>CANADA ↗</b></div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact-orb" aria-hidden="true"><i></i><i></i><i></i></div>
+      <p class="section-no mono">05 / CONTACT</p>
+      <h2>Let’s keep<br>systems moving.</h2>
+      <a class="contact-link magnetic" href="https://github.com/bieebek" target="_blank" rel="noreferrer"><span>CONNECT ON GITHUB</span><b>↗</b></a>
+      <div class="contact-meta mono"><span>TIMMINS, ONTARIO<br>CANADA</span><span>OPEN TO<br>OPPORTUNITIES</span></div>
+    </section>
+  </main>
+
+  <footer class="mono"><span>© 2026 BIBEK MAHARJAN</span><a href="#home">BACK TO TOP ↑</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
