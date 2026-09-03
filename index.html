@@ -11,16 +11,18 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="loader" aria-hidden="true"><div class="loader-name">BM</div><div class="loader-line"><i></i></div><p>INITIALIZING SYSTEM</p></div>
+  <div class="loader" aria-hidden="true"><div class="loader-name">BM</div><div class="loader-line"><i></i></div><p>INITIALIZING SYSTEM · <span id="load-count">000</span>%</p></div>
   <canvas id="network" aria-hidden="true"></canvas>
   <div class="noise" aria-hidden="true"></div>
+  <div class="spotlight" aria-hidden="true"></div>
   <div class="cursor" aria-hidden="true"></div>
   <div class="progress" aria-hidden="true"><i></i></div>
 
   <header class="nav">
     <a class="mark" href="#home" aria-label="Bibek Maharjan home">BM<span>®</span></a>
-    <p class="nav-role">IT SUPPORT / NETWORKS<br>SYSTEMS / LINUX</p>
+    <p class="nav-role">IT SUPPORT / NETWORKS<br><span id="local-time">TIMMINS · --:--</span></p>
     <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#profile">Profile</a><a href="#contact">Contact</a></nav>
+    <button class="motion-toggle" type="button" aria-pressed="false"><i></i> MOTION ON</button>
     <button class="menu" aria-label="Open menu" aria-expanded="false">MENU</button>
   </header>
 
@@ -40,10 +42,19 @@
       </div>
     </section>
 
+    <div class="signal-strip" aria-hidden="true">
+      <div><span>DIAGNOSE</span><b>✳</b><span>CONFIGURE</span><b>✳</b><span>SECURE</span><b>✳</b><span>DOCUMENT</span><b>✳</b><span>SUPPORT</span><b>✳</b><span>DIAGNOSE</span><b>✳</b><span>CONFIGURE</span><b>✳</b><span>SECURE</span><b>✳</b></div>
+    </div>
+
     <section class="statement reveal" id="profile">
       <p class="section-no mono">01 / PROFILE</p>
       <h2>I work where <em>people</em>, networks and systems meet.</h2>
       <div class="statement-foot"><p>From resolving user issues to configuring routed networks and Windows Server environments, I turn technical complexity into systems people can depend on.</p><span class="mono">2+ YEARS<br>USER SUPPORT</span></div>
+      <div class="profile-numbers">
+        <div><strong data-count="4">0</strong><span class="mono">CORE DISCIPLINES</span></div>
+        <div><strong data-count="3">0</strong><span class="mono">FEATURED LABS</span></div>
+        <div><strong>24/7</strong><span class="mono">PROBLEM-SOLVER MINDSET</span></div>
+      </div>
     </section>
 
     <section class="work" id="work">
@@ -52,7 +63,7 @@
       <article class="case reveal tilt">
         <div class="case-top mono"><span>PROJECT / 001</span><span>HELP DESK</span><span>2026</span></div>
         <div class="case-body">
-          <div><h3>osTicket<br>Support Lab</h3><p>A complete ticketing environment showing the support lifecycle from intake and triage to SLA management and resolution.</p><a class="text-link magnetic" href="https://github.com/bieebek/osticket-helpdesk-lab" target="_blank" rel="noreferrer">VIEW CASE STUDY <b>↗</b></a></div>
+          <div><h3>osTicket<br>Support Lab</h3><p>A complete ticketing environment showing the support lifecycle from intake and triage to SLA management and resolution.</p><ul class="case-notes"><li>Configured users, teams and departments</li><li>Tested SLA and escalation workflows</li><li>Documented the complete ticket lifecycle</li></ul><a class="text-link magnetic" href="https://github.com/bieebek/osticket-helpdesk-lab" target="_blank" rel="noreferrer">VIEW CASE STUDY <b>↗</b></a></div>
           <div class="case-scene tickets-scene" aria-hidden="true">
             <div class="ticket-card t1"><span>#1042</span><b>ACCESS ISSUE</b><small>PRIORITY · HIGH</small></div>
             <div class="ticket-card t2"><span>#1041</span><b>SOFTWARE REQUEST</b><small>STATUS · OPEN</small></div>
@@ -65,7 +76,7 @@
       <article class="case reveal tilt inverse">
         <div class="case-top mono"><span>PROJECT / 002</span><span>NETWORK ENGINEERING</span><span>2026</span></div>
         <div class="case-body">
-          <div><h3>Secure<br>Multi-Site Network</h3><p>A three-router topology configured with OSPF, local AAA, SSH, role-based CLI views and a site-to-site IPSec VPN.</p></div>
+          <div><h3>Secure<br>Multi-Site Network</h3><p>A three-router topology configured with OSPF, local AAA, SSH, role-based CLI views and a site-to-site IPSec VPN.</p><ul class="case-notes"><li>Validated routing and neighbor relationships</li><li>Secured remote administration with SSH</li><li>Verified encrypted traffic across sites</li></ul></div>
           <div class="case-scene router-scene" aria-label="Animated network topology">
             <div class="router a">R1<small>10.1.1.1</small></div><div class="beam b1"></div><div class="router b">R2<small>CORE</small></div><div class="beam b2"></div><div class="router c">R3<small>10.2.2.1</small></div>
             <span class="packet p1"></span><span class="packet p2"></span>
@@ -77,7 +88,7 @@
       <article class="case reveal tilt">
         <div class="case-top mono"><span>PROJECT / 003</span><span>SYSTEM ADMINISTRATION</span><span>2026</span></div>
         <div class="case-body">
-          <div><h3>Windows<br>Deployment Lab</h3><p>An integrated Server 2022 environment with Active Directory, DNS, DHCP and WDS for automated PXE client deployment.</p></div>
+          <div><h3>Windows<br>Deployment Lab</h3><p>An integrated Server 2022 environment with Active Directory, DNS, DHCP and WDS for automated PXE client deployment.</p><ul class="case-notes"><li>Built domain and addressing services</li><li>Automated deployment through PXE boot</li><li>Joined and validated Windows clients</li></ul></div>
           <div class="case-scene server-scene" aria-hidden="true">
             <div class="rack"><div><i></i><span>DC01</span><small>192.168.71.10</small></div><div><i></i><span>WDS</span><small>192.168.71.160</small></div><div><i></i><span>CLIENT</span><small>DOMAIN JOINED</small></div></div>
           </div>
@@ -96,15 +107,22 @@
       </div>
     </section>
 
+    <section class="process">
+      <p class="section-no mono reveal">04 / HOW I WORK</p>
+      <div class="process-line reveal"><span class="mono">A</span><h3>Listen</h3><p>Start with the user, the symptoms and the impact.</p></div>
+      <div class="process-line reveal"><span class="mono">B</span><h3>Isolate</h3><p>Reduce complexity until the real fault is visible.</p></div>
+      <div class="process-line reveal"><span class="mono">C</span><h3>Resolve</h3><p>Apply, test and document a durable fix.</p></div>
+    </section>
+
     <section class="experience">
-      <p class="section-no mono reveal">04 / EXPERIENCE</p>
+      <p class="section-no mono reveal">05 / EXPERIENCE</p>
       <div class="exp-row reveal"><time class="mono">2021—2023</time><div><h3>Junior IT Support Technician</h3><p>Marine Engineering Solution Pvt. Ltd.</p></div><b>2 YEARS ↗</b></div>
       <div class="exp-row reveal"><time class="mono">EDUCATION</time><div><h3>Computer Engineering Technician</h3><p>Northern College · Ontario</p></div><b>CANADA ↗</b></div>
     </section>
 
     <section class="contact" id="contact">
       <div class="contact-orb" aria-hidden="true"><i></i><i></i><i></i></div>
-      <p class="section-no mono">05 / CONTACT</p>
+      <p class="section-no mono">06 / CONTACT</p>
       <h2>Let’s keep<br>systems moving.</h2>
       <a class="contact-link magnetic" href="https://github.com/bieebek" target="_blank" rel="noreferrer"><span>CONNECT ON GITHUB</span><b>↗</b></a>
       <div class="contact-meta mono"><span>TIMMINS, ONTARIO<br>CANADA</span><span>OPEN TO<br>OPPORTUNITIES</span></div>
