@@ -1,6 +1,6 @@
 # Bibek Maharjan — IT Portfolio
 
-[View the live portfolio](https://bibek-it-portfolio.bibekmaharzan13.chatgpt.site)
+[View the live portfolio](https://example-portfolio-v1.vercel.app)
 
 A cinematic, responsive portfolio focused on IT support, networking, Windows Server, virtualization, and Linux.
 
